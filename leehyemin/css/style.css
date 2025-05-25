@@ -209,7 +209,6 @@ html {
 
 .txt-mbit-desc {
   position: relative;
-  margin-bottom: 0.9rem;
   color: var(--txt-color);
   font-family: Pretendard-Bold;
   font-size: 1.4rem;
@@ -232,6 +231,9 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+
+  width: 90%;
+  margin: 1rem auto;
 }
 
 .img-speech-bubble {
@@ -241,13 +243,11 @@ html {
 
 .txt-quote {
   position: absolute;
-  top: 2.6rem;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 1.4rem;
   color: var(--txt-color);
   font-family: Dovemayo-Medium;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -257,10 +257,10 @@ html {
 }
 
 .main-txt-box {
-  width: 85%;
-  padding: 35px 0;
+  width: 90%;
+  padding: 35px 15px;
   margin-bottom: 40px;
-  text-align: center;
+  text-align: left;
   border: 5px solid var(--box-border-color);
   background-color: rgba(255, 255, 255, 0.7);
 }
