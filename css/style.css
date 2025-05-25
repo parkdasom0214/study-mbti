@@ -1,5 +1,6 @@
-/* font */
-
+/* -----------------------------------------------
+  fonts
+--------------------------------------------------*/
 @font-face {
   font-family: "Cafe24Danjunghae";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff")
@@ -32,40 +33,81 @@
   font-style: normal;
 }
 
-/* 기본 설정값 */
+/* -----------------------------------------------
+  시각적 숨김 처리
+--------------------------------------------------*/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  white-space: nowrap;
+}
+
+/* -----------------------------------------------
+  기본 설정값
+--------------------------------------------------*/
 html {
   font-size: 4vw;
 }
 
 :root {
-  /* color */
   --tit-color: #000;
   --txt-color: #744900;
   --mbti-color: #f0a600;
   --box-border-color: #ffc951;
 
-  /* font */
   --tit-size: 3rem;
   --txt-size: 1.19rem;
   --mbti-size: 3.5rem;
   --btn-size: 1.75rem;
 }
 
+/* -----------------------------------------------
+  모바일 이외 영역 (414px 이상)
+--------------------------------------------------*/
 @media screen and (min-width: 415px) {
   header,
-  .txt-mbit,
-  .txt-mbit-desc,
-  .wrap-speech,
-  button {
+  footer,
+  .mbti-result,
+  .btn-box {
     display: none;
   }
 
   body {
-    background-color: #5477ff;
+    background-color: #feedcd;
+  }
+
+  .pc-none {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .pc-none img {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .pc-none p {
+    color: var(--txt-color);
+    font-family: Dovemayo-Medium;
+    font-weight: bold;
+    font-size: 1.5rem;
   }
 }
 
+/* -----------------------------------------------
+  모바일 전용 영역 (최대 414px)
+--------------------------------------------------*/
 @media screen and (max-width: 414px) {
+  /* 모바일 기본설정 */
+
   body {
     background: url(../img/main_bg.png) top / cover no-repeat;
   }
@@ -73,6 +115,19 @@ html {
   .pc-none {
     display: none;
   }
+
+  button {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1.9rem;
+    font-family: Cafe24Danjunghae;
+    font-size: var(--btn-size);
+  }
+
+  button:hover {
+    color: var(--txt-color);
+  }
+
   /* header 영역 */
 
   .content-header {
@@ -81,13 +136,11 @@ html {
     left: 0;
     right: 0;
     text-align: center;
-
     z-index: 100;
   }
 
   .wrap-titbg {
     position: relative;
-    top: 0px;
   }
 
   .wrap-titbg img {
@@ -96,23 +149,23 @@ html {
 
   .wrap-tit-txt {
     position: absolute;
-    top: 2rem;
+    top: 2.2rem;
     left: 17%;
   }
 
   .tit-sup {
     margin-bottom: 0.3rem;
     color: #ff8749;
-
     font-family: Dovemayo-Medium;
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .tit-result {
     font-family: Cafe24Danjunghae;
     font-size: var(--tit-size);
   }
+
   .tit-sup-M {
     color: #ff5757;
   }
@@ -128,14 +181,11 @@ html {
 }
 
 /* main 영역 */
-
 .content-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  /* header 높이 공간 확보 */
   margin-top: 11rem;
 }
 
@@ -144,7 +194,6 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .txt-mbit {
@@ -153,7 +202,35 @@ html {
   font-family: KOTRA_BOLD-Bold;
 }
 
+.wrap-mbit-desc {
+  display: inline-block;
+  text-align: center;
+}
+
+.txt-mbit-desc {
+  position: relative;
+  margin-bottom: 0.9rem;
+  color: var(--txt-color);
+  font-family: Pretendard-Bold;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.desc-bg-img {
+  position: absolute;
+  top: 13rem;
+  left: 53%;
+  transform: translateX(-50%);
+  width: 16rem;
+  height: auto;
+  z-index: -1;
+}
+
 .wrap-speech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -162,40 +239,80 @@ html {
   opacity: 60%;
 }
 
-.txt-mbit-desc {
-  color: var(--txt-color);
-  text-align: center;
-  margin-bottom: 0.9rem;
-  font-family: Pretendard-Bold;
-  font-size: 1.4rem;
-}
-
 .txt-quote {
   position: absolute;
-  /* top: 0;
-  right: 17%; */
-  top: 7%;
+  top: 2.6rem;
   left: 50%;
   transform: translate(-50%, -50%);
-
   color: var(--txt-color);
   font-family: Dovemayo-Medium;
   font-weight: bold;
   font-size: 1.3rem;
+  text-align: center;
 }
 
 .img-mbti {
   width: 95%;
+  margin-bottom: 20px;
 }
 
 .main-txt-box {
-  width: 90%;
-  height: 100px;
-  border: 10px solid var(--box-border-color);
-  background-color: rgb(255, 255, 255, 0.5);
+  width: 85%;
+  padding: 35px 0;
+  margin-bottom: 40px;
+  text-align: center;
+  border: 5px solid var(--box-border-color);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main-txt-box ul li {
+  color: var(--txt-color);
+  font-family: Dovemayo-Medium;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+
+.main-txt-box ul li::before {
+  content: "";
+  display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
+  margin-right: 10px;
+  background: url(../img/star.png) no-repeat center / contain;
+}
+
+/* btn-box 영역 */
+
+.btn-box {
+  margin-bottom: 30px;
 }
 
 .wrap-btn {
   display: flex;
   flex-direction: column;
+}
+
+/* 버튼 배경 이미지 */
+.btn-with-bg .btn-bg {
+  position: absolute;
+  top: -0.1rem;
+  left: -1.6rem;
+  width: 16rem;
+  height: 3rem;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* footer 영역 */
+.content-footer {
+  text-align: center;
+}
+
+.footer-copyright {
+  color: var(--txt-color);
+  opacity: 0.5;
+  font-size: 0.8rem;
+  margin-bottom: 30px;
 }
