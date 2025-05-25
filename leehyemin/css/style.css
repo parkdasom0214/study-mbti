@@ -217,10 +217,10 @@ html {
 
 .desc-bg-img {
   position: absolute;
-  top: 13rem;
+  top: 12.5rem;
   left: 53%;
   transform: translateX(-50%);
-  width: 16rem;
+  width: 19rem;
   height: auto;
   z-index: -1;
 }
