@@ -66,41 +66,6 @@ html {
   --btn-size: 1.75rem;
 }
 
-/* -----------------------------------------------
-  모바일 이외 영역 (414px 이상)
---------------------------------------------------*/
-@media screen and (min-width: 415px) {
-  header,
-  footer,
-  .mbti-result,
-  .btn-box {
-    display: none;
-  }
-
-  body {
-    background-color: #feedcd;
-  }
-
-  .pc-none {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-
-  .pc-none img {
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .pc-none p {
-    color: var(--txt-color);
-    font-family: Dovemayo-Medium;
-    font-weight: bold;
-    font-size: 1.5rem;
-  }
-}
 
 /* -----------------------------------------------
   모바일 전용 영역 (최대 414px)
@@ -178,7 +143,7 @@ html {
   .tit-sup-I {
     color: #5bdf2e;
   }
-}
+
 
 /* main 영역 */
 .content-main {
@@ -186,6 +151,7 @@ html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   margin-top: 11rem;
 }
 
@@ -209,10 +175,12 @@ html {
 
 .txt-mbit-desc {
   position: relative;
+
   color: var(--txt-color);
+
+  text-align: center;
   font-family: Pretendard-Bold;
   font-size: 1.4rem;
-  text-align: center;
 }
 
 .desc-bg-img {
@@ -220,6 +188,7 @@ html {
   top: 12.5rem;
   left: 53%;
   transform: translateX(-50%);
+
   width: 19rem;
   height: auto;
   z-index: -1;
@@ -244,11 +213,13 @@ html {
 .txt-quote {
   position: absolute;
   top: 1.4rem;
+  
   color: var(--txt-color);
+
+  text-align: center;
   font-family: Dovemayo-Medium;
   font-weight: bold;
   font-size: 1rem;
-  text-align: center;
 }
 
 .img-mbti {
@@ -315,4 +286,5 @@ html {
   opacity: 0.5;
   font-size: 0.8rem;
   margin-bottom: 30px;
+}
 }
