@@ -66,6 +66,237 @@ html {
   --btn-size: 1.75rem;
 }
 
+/* -----------------------------------------------
+  PC 전용 영역 (최대 414px)
+--------------------------------------------------*/
+
+@media screen and (min-width: 415px) {
+
+  html {
+
+    width: 414px;
+    
+    margin: 0 auto;
+  }
+
+  body {
+    margin: 0 auto;
+
+    height: auto;
+    background: url(../img/main_bg.png) top / 414px 1185px no-repeat;
+  }
+
+  .wrap-body {
+    margin-left: auto;
+  }
+
+  button {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-family: Cafe24Danjunghae;
+    font-size: 28px;
+  }
+
+  button:hover {
+    color: var(--txt-color);
+  }
+
+  /* header 영역 */
+
+  .content-header {
+    position: fixed;
+    top: 0;
+    text-align: center;
+    z-index: 100;
+  }
+
+  .wrap-titbg {
+    position: relative;
+  }
+
+  .wrap-titbg img {
+    width: 414px;
+  }
+
+  .wrap-tit-txt {
+    position: absolute;
+    top: 35.2px;
+    left: 74px;
+  }
+
+  .tit-sup {
+    margin-bottom: 4.8px;
+    color: #ff8749;
+    font-family: Dovemayo-Medium;
+    font-weight: bold;
+    font-size: 22.4px;
+  }
+
+  .tit-result {
+    font-family: Cafe24Danjunghae;
+    font-size: 48px;
+  }
+
+  .tit-sup-M {
+    color: #ff5757;
+  }
+  .tit-sup-B {
+    color: #c54bff;
+  }
+  .tit-sup-T {
+    color: #5477ff;
+  }
+  .tit-sup-I {
+    color: #5bdf2e;
+  }
+
+
+/* main 영역 */
+.content-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 181px;
+}
+
+.wrap-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt-mbit {
+  color: var(--mbti-color);
+  font-size: 56px;
+  font-family: KOTRA_BOLD-Bold;
+}
+
+.wrap-mbit-desc {
+  display: inline-block;
+  text-align: center;
+}
+
+.txt-mbit-desc {
+  position: relative;
+
+  color: var(--txt-color);
+
+  text-align: center;
+  font-family: Pretendard-Bold;
+  font-size: 22.4px;
+}
+
+.desc-bg-img {
+  position: absolute;
+  top: 206px;
+  transform: translateX(-50%);
+
+  width: 304px;
+  height: auto;
+  z-index: -1;
+}
+
+.wrap-speech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  width: 90%;
+  margin: 20px auto;
+}
+
+.img-speech-bubble {
+  width: 80%;
+  opacity: 60%;
+}
+
+.txt-quote {
+  position: absolute;
+  top: 22px;
+  
+  color: var(--txt-color);
+
+  text-align: center;
+  font-family: Dovemayo-Medium;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.img-mbti {
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.main-txt-box {
+  width: 90%;
+  padding: 35px 15px;
+  margin-bottom: 40px;
+  text-align: left;
+  border: 5px solid var(--box-border-color);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main-txt-box ul li {
+  color: var(--txt-color);
+  font-family: Dovemayo-Medium;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+}
+
+.main-txt-box ul li::before {
+  content: "";
+  display: inline-block;
+  width: 11px;
+  height: 11px;
+  margin-right: 10px;
+  background: url(../img/star.png) no-repeat center / contain;
+}
+
+/* btn-box 영역 */
+
+.btn-box {
+  margin-bottom: 30px;
+}
+
+.wrap-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 버튼 배경 이미지 */
+.btn-with-bg .btn-bg {
+  position: absolute;
+  top: -24px;
+  left: -50px;
+  width: 304px;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* footer 영역 */
+.content-footer {
+  text-align: center;
+}
+
+.footer-copyright {
+  color: var(--txt-color);
+  opacity: 0.5;
+  font-size: 12.8px;
+  margin-bottom: 30px;
+}
+}
+
+
+
 
 /* -----------------------------------------------
   모바일 전용 영역 (최대 414px)
