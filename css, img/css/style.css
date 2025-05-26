@@ -34,6 +34,7 @@ main {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2.2rem;
+    word-break: keep-all;
 }
 
 /* section .answer-box */
@@ -52,6 +53,7 @@ main {
     box-shadow: 0 8px 20px rgba(108, 99, 255, 0.15);
 
     text-align: center;
+    word-break: keep-all;
 }
 
 .answer-box a:hover {
