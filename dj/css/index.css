@@ -33,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100dvh;
+  opacity: 0.1;
 }
 .intro-section__title {
   font-size: 4rem;
