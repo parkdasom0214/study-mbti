@@ -67,21 +67,169 @@ html {
 }
 
 /* -----------------------------------------------
-  PC 전용 영역 (최대 414px)
+  공통 스타일
 --------------------------------------------------*/
+button {
+  position: relative;
+  display: inline-block;
+  font-family: Cafe24Danjunghae;
+}
 
+button:hover {
+  color: var(--txt-color);
+}
+
+.content-header {
+  position: fixed;
+  top: 0;
+  text-align: center;
+  z-index: 100;
+}
+
+.wrap-titbg {
+  position: relative;
+}
+
+.tit-sup {
+  color: #ff8749;
+  font-family: Dovemayo-Medium;
+  font-weight: bold;
+}
+
+.tit-result {
+  font-family: Cafe24Danjunghae;
+}
+
+.tit-sup-M { color: #ff5757; }
+.tit-sup-B { color: #c54bff; }
+.tit-sup-T { color: #5477ff; }
+.tit-sup-I { color: #5bdf2e; }
+
+.content-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrap-main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.txt-mbit {
+  color: var(--mbti-color);
+  font-family: KOTRA_BOLD-Bold;
+}
+
+.wrap-mbit-desc {
+  display: inline-block;
+  text-align: center;
+}
+
+.txt-mbit-desc {
+  position: relative;
+  color: var(--txt-color);
+  text-align: center;
+  font-family: Pretendard-Bold;
+}
+
+.desc-bg-img {
+  position: absolute;
+  transform: translateX(-50%);
+  height: auto;
+  z-index: -1;
+}
+
+.wrap-speech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.img-speech-bubble {
+  width: 80%;
+  opacity: 60%;
+}
+
+.txt-quote {
+  position: absolute;
+  color: var(--txt-color);
+  text-align: center;
+  font-family: Dovemayo-Medium;
+  font-weight: bold;
+}
+
+.img-mbti {
+  width: 95%;
+  margin-bottom: 20px;
+}
+
+.main-txt-box {
+  width: 90%;
+  padding: 35px 15px;
+  margin-bottom: 40px;
+  text-align: left;
+  border: 5px solid var(--box-border-color);
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main-txt-box ul li {
+  color: var(--txt-color);
+  font-family: Dovemayo-Medium;
+  font-weight: bold;
+}
+
+.main-txt-box ul li::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  background: url(../img/star.png) no-repeat center / contain;
+}
+
+.btn-box {
+  margin-bottom: 30px;
+}
+
+.wrap-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-with-bg .btn-bg {
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.content-footer {
+  text-align: center;
+}
+
+.footer-copyright {
+  color: var(--txt-color);
+  opacity: 0.5;
+  margin-bottom: 30px;
+}
+
+/* -----------------------------------------------
+  PC 전용 영역 (최소 415px)
+--------------------------------------------------*/
 @media screen and (min-width: 415px) {
-
   html {
-
     width: 414px;
-    
     margin: 0 auto;
   }
 
   body {
     margin: 0 auto;
-
     height: auto;
     background: url(../img/main_bg.png) top / 414px 1185px no-repeat;
   }
@@ -91,28 +239,8 @@ html {
   }
 
   button {
-    position: relative;
-    display: inline-block;
     margin-bottom: 30px;
-    font-family: Cafe24Danjunghae;
     font-size: 28px;
-  }
-
-  button:hover {
-    color: var(--txt-color);
-  }
-
-  /* header 영역 */
-
-  .content-header {
-    position: fixed;
-    top: 0;
-    text-align: center;
-    z-index: 100;
-  }
-
-  .wrap-titbg {
-    position: relative;
   }
 
   .wrap-titbg img {
@@ -127,183 +255,66 @@ html {
 
   .tit-sup {
     margin-bottom: 4.8px;
-    color: #ff8749;
-    font-family: Dovemayo-Medium;
-    font-weight: bold;
     font-size: 22.4px;
   }
 
   .tit-result {
-    font-family: Cafe24Danjunghae;
     font-size: 48px;
   }
 
-  .tit-sup-M {
-    color: #ff5757;
-  }
-  .tit-sup-B {
-    color: #c54bff;
-  }
-  .tit-sup-T {
-    color: #5477ff;
-  }
-  .tit-sup-I {
-    color: #5bdf2e;
+  .content-main {
+    margin-top: 181px;
   }
 
+  .txt-mbit {
+    font-size: 56px;
+  }
 
-/* main 영역 */
-.content-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .txt-mbit-desc {
+    font-size: 22.4px;
+  }
 
-  margin-top: 181px;
+  .desc-bg-img {
+    top: 206px;
+    width: 304px;
+  }
+
+  .wrap-speech {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .txt-quote {
+    top: 22px;
+    font-size: 16px;
+  }
+
+  .main-txt-box ul li {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .main-txt-box ul li::before {
+    width: 11px;
+    height: 11px;
+  }
+
+  .btn-with-bg .btn-bg {
+    top: -24px;
+    left: -50px;
+    width: 304px;
+    height: auto;
+  }
+
+  .footer-copyright {
+    font-size: 12.8px;
+  }
 }
-
-.wrap-main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.txt-mbit {
-  color: var(--mbti-color);
-  font-size: 56px;
-  font-family: KOTRA_BOLD-Bold;
-}
-
-.wrap-mbit-desc {
-  display: inline-block;
-  text-align: center;
-}
-
-.txt-mbit-desc {
-  position: relative;
-
-  color: var(--txt-color);
-
-  text-align: center;
-  font-family: Pretendard-Bold;
-  font-size: 22.4px;
-}
-
-.desc-bg-img {
-  position: absolute;
-  top: 206px;
-  transform: translateX(-50%);
-
-  width: 304px;
-  height: auto;
-  z-index: -1;
-}
-
-.wrap-speech {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  width: 90%;
-  margin: 20px auto;
-}
-
-.img-speech-bubble {
-  width: 80%;
-  opacity: 60%;
-}
-
-.txt-quote {
-  position: absolute;
-  top: 22px;
-  
-  color: var(--txt-color);
-
-  text-align: center;
-  font-family: Dovemayo-Medium;
-  font-weight: bold;
-  font-size: 16px;
-}
-
-.img-mbti {
-  width: 95%;
-  margin-bottom: 20px;
-}
-
-.main-txt-box {
-  width: 90%;
-  padding: 35px 15px;
-  margin-bottom: 40px;
-  text-align: left;
-  border: 5px solid var(--box-border-color);
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.main-txt-box ul li {
-  color: var(--txt-color);
-  font-family: Dovemayo-Medium;
-  font-size: 16px;
-  font-weight: bold;
-  line-height: 22px;
-}
-
-.main-txt-box ul li::before {
-  content: "";
-  display: inline-block;
-  width: 11px;
-  height: 11px;
-  margin-right: 10px;
-  background: url(../img/star.png) no-repeat center / contain;
-}
-
-/* btn-box 영역 */
-
-.btn-box {
-  margin-bottom: 30px;
-}
-
-.wrap-btn {
-  display: flex;
-  flex-direction: column;
-}
-
-/* 버튼 배경 이미지 */
-.btn-with-bg .btn-bg {
-  position: absolute;
-  top: -24px;
-  left: -50px;
-  width: 304px;
-  height: auto;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* footer 영역 */
-.content-footer {
-  text-align: center;
-}
-
-.footer-copyright {
-  color: var(--txt-color);
-  opacity: 0.5;
-  font-size: 12.8px;
-  margin-bottom: 30px;
-}
-}
-
-
-
 
 /* -----------------------------------------------
   모바일 전용 영역 (최대 414px)
 --------------------------------------------------*/
 @media screen and (max-width: 414px) {
-  /* 모바일 기본설정 */
-
   body {
     background: url(../img/main_bg.png) top / cover no-repeat;
   }
@@ -313,30 +324,13 @@ html {
   }
 
   button {
-    position: relative;
-    display: inline-block;
     margin-bottom: 1.9rem;
-    font-family: Cafe24Danjunghae;
     font-size: var(--btn-size);
   }
 
-  button:hover {
-    color: var(--txt-color);
-  }
-
-  /* header 영역 */
-
   .content-header {
-    position: fixed;
-    top: 0;
     left: 0;
     right: 0;
-    text-align: center;
-    z-index: 100;
-  }
-
-  .wrap-titbg {
-    position: relative;
   }
 
   .wrap-titbg img {
@@ -351,171 +345,54 @@ html {
 
   .tit-sup {
     margin-bottom: 0.3rem;
-    color: #ff8749;
-    font-family: Dovemayo-Medium;
-    font-weight: bold;
     font-size: 1.4rem;
   }
 
   .tit-result {
-    font-family: Cafe24Danjunghae;
     font-size: var(--tit-size);
   }
 
-  .tit-sup-M {
-    color: #ff5757;
-  }
-  .tit-sup-B {
-    color: #c54bff;
-  }
-  .tit-sup-T {
-    color: #5477ff;
-  }
-  .tit-sup-I {
-    color: #5bdf2e;
+  .content-main {
+    margin-top: 11rem;
   }
 
+  .txt-mbit {
+    font-size: var(--mbti-size);
+  }
 
-/* main 영역 */
-.content-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .txt-mbit-desc {
+    font-size: 1.4rem;
+  }
 
-  margin-top: 11rem;
-}
+  .desc-bg-img {
+    top: 12.5rem;
+    left: 53%;
+    width: 19rem;
+  }
 
-.wrap-main-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .txt-quote {
+    top: 1.4rem;
+    font-size: 1rem;
+  }
 
-.txt-mbit {
-  color: var(--mbti-color);
-  font-size: var(--mbti-size);
-  font-family: KOTRA_BOLD-Bold;
-}
+  .main-txt-box ul li {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-.wrap-mbit-desc {
-  display: inline-block;
-  text-align: center;
-}
+  .main-txt-box ul li::before {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
 
-.txt-mbit-desc {
-  position: relative;
+  .btn-with-bg .btn-bg {
+    top: -0.1rem;
+    left: -1.6rem;
+    width: 16rem;
+    height: 3rem;
+  }
 
-  color: var(--txt-color);
-
-  text-align: center;
-  font-family: Pretendard-Bold;
-  font-size: 1.4rem;
-}
-
-.desc-bg-img {
-  position: absolute;
-  top: 12.5rem;
-  left: 53%;
-  transform: translateX(-50%);
-
-  width: 19rem;
-  height: auto;
-  z-index: -1;
-}
-
-.wrap-speech {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-
-  width: 90%;
-  margin: 1rem auto;
-}
-
-.img-speech-bubble {
-  width: 80%;
-  opacity: 60%;
-}
-
-.txt-quote {
-  position: absolute;
-  top: 1.4rem;
-  
-  color: var(--txt-color);
-
-  text-align: center;
-  font-family: Dovemayo-Medium;
-  font-weight: bold;
-  font-size: 1rem;
-}
-
-.img-mbti {
-  width: 95%;
-  margin-bottom: 20px;
-}
-
-.main-txt-box {
-  width: 90%;
-  padding: 35px 15px;
-  margin-bottom: 40px;
-  text-align: left;
-  border: 5px solid var(--box-border-color);
-  background-color: rgba(255, 255, 255, 0.7);
-}
-
-.main-txt-box ul li {
-  color: var(--txt-color);
-  font-family: Dovemayo-Medium;
-  font-size: 1rem;
-  font-weight: bold;
-  line-height: 1.5rem;
-}
-
-.main-txt-box ul li::before {
-  content: "";
-  display: inline-block;
-  width: 0.7rem;
-  height: 0.7rem;
-  margin-right: 10px;
-  background: url(../img/star.png) no-repeat center / contain;
-}
-
-/* btn-box 영역 */
-
-.btn-box {
-  margin-bottom: 30px;
-}
-
-.wrap-btn {
-  display: flex;
-  flex-direction: column;
-}
-
-/* 버튼 배경 이미지 */
-.btn-with-bg .btn-bg {
-  position: absolute;
-  top: -0.1rem;
-  left: -1.6rem;
-  width: 16rem;
-  height: 3rem;
-  object-fit: cover;
-  z-index: -1;
-  pointer-events: none;
-}
-
-/* footer 영역 */
-.content-footer {
-  text-align: center;
-}
-
-.footer-copyright {
-  color: var(--txt-color);
-  opacity: 0.5;
-  font-size: 0.8rem;
-  margin-bottom: 30px;
-}
+  .footer-copyright {
+    font-size: 0.8rem;
+  }
 }
