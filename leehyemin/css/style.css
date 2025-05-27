@@ -280,7 +280,7 @@ button:hover {
 @media screen and (max-width: 414px) {
 
   html {
-    font-size: 4vw;
+    font-size: calc(100vw / 414 * 16);
   }
 
   body {
