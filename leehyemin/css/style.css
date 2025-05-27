@@ -50,9 +50,6 @@
 /* -----------------------------------------------
   기본 설정값
 --------------------------------------------------*/
-html {
-  font-size: 4vw;
-}
 
 :root {
   --tit-color: #000;
@@ -72,7 +69,9 @@ html {
 button {
   position: relative;
   display: inline-block;
+  margin-bottom: 1.9rem;
   font-family: Cafe24Danjunghae;
+  font-size: var(--btn-size);
 }
 
 button:hover {
@@ -90,14 +89,23 @@ button:hover {
   position: relative;
 }
 
+.wrap-tit-txt {
+  position: absolute;
+  top: 2.2rem;
+  left: 4.6rem;
+}
+
 .tit-sup {
+  margin-bottom: 0.3rem;
   color: #ff8749;
   font-family: Dovemayo-Medium;
+  font-size: 1.4rem;
   font-weight: bold;
 }
 
 .tit-result {
   font-family: Cafe24Danjunghae;
+  font-size: var(--tit-size);
 }
 
 .tit-sup-M { color: #ff5757; }
@@ -110,6 +118,8 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-top: 11rem;
 }
 
 .wrap-main-content {
@@ -122,6 +132,7 @@ button:hover {
 .txt-mbti {
   color: var(--mbti-color);
   font-family: KOTRA_BOLD-Bold;
+  font-size: var(--mbti-size);
 }
 
 .wrap-mbti-desc {
@@ -134,11 +145,13 @@ button:hover {
   color: var(--txt-color);
   text-align: center;
   font-family: Pretendard-Bold;
+  font-size: 1.4rem;
 }
 
 .desc-bg-img {
   position: absolute;
-  transform: translateX(-50%);
+  top: 12.5rem;
+  width: 19rem;
   height: auto;
   z-index: -1;
 }
@@ -160,6 +173,7 @@ button:hover {
 
 .txt-quote {
   position: absolute;
+  top: 1.4rem;
   color: var(--txt-color);
   text-align: center;
   font-family: Dovemayo-Medium;
@@ -184,11 +198,14 @@ button:hover {
   color: var(--txt-color);
   font-family: Dovemayo-Medium;
   font-weight: bold;
+  line-height: 1.5rem;
 }
 
 .main-txt-box ul li::before {
   content: "";
   display: inline-block;
+  width: 0.7rem;
+  height: 0.7rem;
   margin-right: 10px;
   background: url(../img/star.png) no-repeat center / contain;
 }
@@ -204,6 +221,10 @@ button:hover {
 
 .btn-with-bg .btn-bg {
   position: absolute;
+  top: -0.1rem;
+  left: -2rem;
+  width: 16rem;
+  height: 3rem;
   object-fit: cover;
   z-index: -1;
   pointer-events: none;
@@ -219,95 +240,37 @@ button:hover {
   margin-bottom: 30px;
 }
 
+.footer-copyright {
+  font-size: 0.8rem;
+}
+
 /* -----------------------------------------------
   PC 전용 영역 (최소 415px)
 --------------------------------------------------*/
 @media screen and (min-width: 415px) {
   html {
-    width: 414px;
+    width: 25.9rem;
     margin: 0 auto;
+    font-size: 16px;
   }
 
   body {
     margin: 0 auto;
     height: auto;
-    background: url(../img/main_bg.png) top / 414px 1185px no-repeat;
-  }
-
-  .wrap-body {
-    margin-left: auto;
-  }
-
-  button {
-    margin-bottom: 30px;
-    font-size: 28px;
+    background: url(../img/main_bg.png) top / 25.9rem 74rem no-repeat;
   }
 
   .wrap-titbg img {
-    width: 414px;
-  }
-
-  .wrap-tit-txt {
-    position: absolute;
-    top: 35.2px;
-    left: 74px;
-  }
-
-  .tit-sup {
-    margin-bottom: 4.8px;
-    font-size: 22.4px;
-  }
-
-  .tit-result {
-    font-size: 48px;
-  }
-
-  .content-main {
-    margin-top: 181px;
-  }
-
-  .txt-mbti {
-    font-size: 56px;
-  }
-
-  .txt-mbti-desc {
-    font-size: 22.4px;
+    width: 25.9rem;
   }
 
   .desc-bg-img {
-    top: 206px;
-    width: 304px;
+    transform: translateX(-46%);
   }
 
   .wrap-speech {
     width: 90%;
-    margin: 20px auto;
-  }
-
-  .txt-quote {
-    top: 22px;
-    font-size: 16px;
-  }
-
-  .main-txt-box ul li {
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  .main-txt-box ul li::before {
-    width: 11px;
-    height: 11px;
-  }
-
-  .btn-with-bg .btn-bg {
-    top: -24px;
-    left: -50px;
-    width: 304px;
-    height: auto;
-  }
-
-  .footer-copyright {
-    font-size: 12.8px;
+    margin: 1.25rem auto;
   }
 }
 
@@ -315,84 +278,21 @@ button:hover {
   모바일 전용 영역 (최대 414px)
 --------------------------------------------------*/
 @media screen and (max-width: 414px) {
+
+  html {
+    font-size: 4vw;
+  }
+
   body {
     background: url(../img/main_bg.png) top / cover no-repeat;
-  }
-
-  .pc-none {
-    display: none;
-  }
-
-  button {
-    margin-bottom: 1.9rem;
-    font-size: var(--btn-size);
-  }
-
-  .content-header {
-    left: 0;
-    right: 0;
   }
 
   .wrap-titbg img {
     width: 100%;
   }
 
-  .wrap-tit-txt {
-    position: absolute;
-    top: 2.2rem;
-    left: 17%;
-  }
-
-  .tit-sup {
-    margin-bottom: 0.3rem;
-    font-size: 1.4rem;
-  }
-
-  .tit-result {
-    font-size: var(--tit-size);
-  }
-
-  .content-main {
-    margin-top: 11rem;
-  }
-
-  .txt-mbti {
-    font-size: var(--mbti-size);
-  }
-
-  .txt-mbti-desc {
-    font-size: 1.4rem;
-  }
-
   .desc-bg-img {
-    top: 12.5rem;
+    transform: translateX(-50%);
     left: 53%;
-    width: 19rem;
-  }
-
-  .txt-quote {
-    top: 1.4rem;
-    font-size: 1rem;
-  }
-
-  .main-txt-box ul li {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
-  .main-txt-box ul li::before {
-    width: 0.7rem;
-    height: 0.7rem;
-  }
-
-  .btn-with-bg .btn-bg {
-    top: -0.1rem;
-    left: -1.6rem;
-    width: 16rem;
-    height: 3rem;
-  }
-
-  .footer-copyright {
-    font-size: 0.8rem;
   }
 }
