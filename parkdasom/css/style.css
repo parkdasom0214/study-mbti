@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#musicButton {
+  position: fixed;       /* 화면에 고정 (스크롤해도 안 움직임) */
+  top: 20px;             /* 위에서 20px 떨어지게 */
+  right: 20px;           /* 오른쪽에서 20px 떨어지게 */
+  
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.web-box {
+  position: relative;
+
+  width: 393px;
+  max-width: 414px;
+  height: 1000px;      
+  margin: auto;
+
+
+  background-image: url('/parkdasom/img-index/background-index.png');
+  background-position: center; 
+  background-size: 393px 1000px;  
+  background-repeat: no-repeat;
+}
+
+.logo {
+  position: absolute;
+  top: 10px;
+
+  width: 250px; 
+  height: 100px;
+  left: 50%;
+  transform: translateX(-39%);
+  background-image: url('/parkdasom/img-index/logo-index.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: -9999px; 
+  overflow: hidden;
+  display: block;
+}
+
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.start-btn {
+  margin-top: 370px;
+  padding: 10px 20px;
+  background-color: #fec152;
+  color: #ef3e3e;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 22px;
+  font-family: DungGeunMo;
+  margin-bottom: 30px;
+}
+
+.hoverText {
+  display: block;
+  margin: 0 auto; /* 수평 가운데 정렬 */
+
+  width: 100px;
+  height: auto;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4열 */
+  grid-template-rows: repeat(4, auto);   /* 4행 */
+  gap: 10px;                              /* 이미지 사이 여백 */
+  max-width: 600px;                       /* 전체 너비 제한 (선택) */
+  margin: 0 auto;                         /* 가운데 정렬 */
+  padding: 20px;
+}
+
+.image-grid img {
+  width: 100%;    /* 그리드 셀을 꽉 채움 */
+  height: auto;   /* 비율 유지 */
+  border-radius: 8px; /* 모서리 둥글게 (선택) */
+  object-fit: cover;
+  
+}
+
+.mbti-desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mbti-card:hover .mbti-desc {
+  opacity: 1;
+  letter-spacing: 1px;
+}
