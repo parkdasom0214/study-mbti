@@ -119,17 +119,17 @@ button:hover {
   align-items: center;
 }
 
-.txt-mbit {
+.txt-mbti {
   color: var(--mbti-color);
   font-family: KOTRA_BOLD-Bold;
 }
 
-.wrap-mbit-desc {
+.wrap-mbti-desc {
   display: inline-block;
   text-align: center;
 }
 
-.txt-mbit-desc {
+.txt-mbti-desc {
   position: relative;
   color: var(--txt-color);
   text-align: center;
@@ -266,11 +266,11 @@ button:hover {
     margin-top: 181px;
   }
 
-  .txt-mbit {
+  .txt-mbti {
     font-size: 56px;
   }
 
-  .txt-mbit-desc {
+  .txt-mbti-desc {
     font-size: 22.4px;
   }
 
@@ -356,11 +356,11 @@ button:hover {
     margin-top: 11rem;
   }
 
-  .txt-mbit {
+  .txt-mbti {
     font-size: var(--mbti-size);
   }
 
-  .txt-mbit-desc {
+  .txt-mbti-desc {
     font-size: 1.4rem;
   }
 
