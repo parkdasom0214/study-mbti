@@ -6,9 +6,9 @@
 }
 
 #musicButton {
-  position: fixed;       /* 화면에 고정 (스크롤해도 안 움직임) */
+  position: absolute;       /* 화면에 고정 (스크롤해도 안 움직임) */
   top: 20px;             /* 위에서 20px 떨어지게 */
-  right: 20px;           /* 오른쪽에서 20px 떨어지게 */
+  right: 10px;           /* 오른쪽에서 20px 떨어지게 */
   
   background: none;
   border: none;
@@ -73,23 +73,25 @@ a {
   font-size: 22px;
   font-family: DungGeunMo;
   margin-bottom: 30px;
+  user-select: none;
 }
 
 .hoverText {
   display: block;
-  margin: 0 auto; /* 수평 가운데 정렬 */
+  margin: 0 auto;
 
   width: 100px;
   height: auto;
+  user-select: none; 
 }
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4열 */
-  grid-template-rows: repeat(4, auto);   /* 4행 */
-  gap: 10px;                              /* 이미지 사이 여백 */
-  max-width: 600px;                       /* 전체 너비 제한 (선택) */
-  margin: 0 auto;                         /* 가운데 정렬 */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px; 
+  max-width: 600px; 
+  margin: 0 auto; 
   padding: 20px;
 }
 
@@ -101,23 +103,12 @@ a {
   
 }
 
-.mbti-desc {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  padding: 10px;
-  font-size: 14px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
 .mbti-card {
   position: relative; /* 말풍선의 위치 기준점 */
   display: inline-block;
   vertical-align: top; /* 가로 정렬 시 세로 위치 정렬 */
+
+  user-select: none;     /* 텍스트 선택도 막기 (커서 깜빡임 방지) */
 }
 
 .mbti-card:hover .mbti-desc {
@@ -126,28 +117,38 @@ a {
 }
 
 .mbti-desc {
-  display: flex; 
   position: absolute;
-  top: -140px; /* 이미지 위로 띄움 */
+  display: flex; 
+  bottom: 0;
+  top: -250px; /* 이미지 위로 띄움 */
   left: 50%;
-  
-  transform: translateX(-50%);
+  transform: translateX(5%);
+
   width: 220px;
+  padding: 20px; 
+  min-height: 120px;
+  color: #fff;
+
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
   background-image: url('/parkdasom/img-index/bubble.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   background-color: transparent; 
-  padding: 20px; 
-  text-align: center;
-  align-items: center;
-  font-family: 'DungGeunMo';
 
+  font-family: 'DungGeunMo';
   font-size: 18px;
   color: #333;
   line-height: 1.3;
   opacity: 0;
-  transition: opacity 0.3s ease;
   pointer-events: none;
-  z-index: 10;
+  z-index: 10
+  
 }
