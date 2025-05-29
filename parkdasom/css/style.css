@@ -5,7 +5,7 @@
   font-style: normal;
 }
 
-#musicButton {
+#music-button {
   position: absolute;       /* 화면에 고정 (스크롤해도 안 움직임) */
   top: 20px;             /* 위에서 20px 떨어지게 */
   right: 10px;           /* 오른쪽에서 20px 떨어지게 */
@@ -52,7 +52,7 @@
 }
 
 
-main {
+.start-btn-wrapper {
   display: flex;
   justify-content: center;
 }
@@ -76,7 +76,7 @@ a {
   user-select: none;
 }
 
-.hoverText {
+.hover-text {
   display: block;
   margin: 0 auto;
 
