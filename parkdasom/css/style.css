@@ -6,10 +6,12 @@
 }
 
 #music-button {
-  position: absolute;       /* 화면에 고정 (스크롤해도 안 움직임) */
-  top: 20px;             /* 위에서 20px 떨어지게 */
-  right: 10px;           /* 오른쪽에서 20px 떨어지게 */
+  position: absolute;     
+  top: 20px;         
+  right: 10px;        
   
+  z-index: 9999;
+
   background: none;
   border: none;
   padding: 0;
@@ -28,31 +30,38 @@
   height: 1000px;      
   margin: auto;
 
-
   background-image: url('/parkdasom/img-index/background-index.png');
   background-position: center; 
   background-size: 393px 1000px;  
   background-repeat: no-repeat;
-
-    user-select: none;     /* 텍스트 선택도 막기 (커서 깜빡임 방지) */
 }
 
 .logo {
   position: absolute;
-  top: 10px;
 
+  top: 20px;
   width: 250px; 
   height: 100px;
   left: 50%;
   transform: translateX(-39%);
-  background-image: url('/parkdasom/img-index/logo-index.png');
+  
   background-size: contain;
   background-repeat: no-repeat;
-  text-indent: -9999px; 
   overflow: hidden;
   display: block;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 
 .start-btn-wrapper {
   display: flex;
@@ -87,6 +96,11 @@ a {
   user-select: none; 
 }
 
+button {
+  all: unset;
+  cursor: pointer;
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -98,17 +112,18 @@ a {
 }
 
 .image-grid img {
-  width: 100%;    /* 그리드 셀을 꽉 채움 */
-  height: auto;   /* 비율 유지 */
-  border-radius: 8px; /* 모서리 둥글게 (선택) */
+  width: 100%;   
+  height: auto; 
+  border-radius: 8px; 
   object-fit: cover;
   
 }
 
 .mbti-card {
-  position: relative; /* 말풍선의 위치 기준점 */
+  position: relative; 
   display: inline-block;
-  vertical-align: top; /* 가로 정렬 시 세로 위치 정렬 */
+  vertical-align: top; 
+
 }
 
 .mbti-card:hover .mbti-desc {
@@ -120,12 +135,11 @@ a {
   position: absolute;
   display: flex; 
   bottom: 0;
-  top: -250px; /* 이미지 위로 띄움 */
+  top: -250px; 
   left: 50%;
   transform: translateX(5%);
 
   width: 220px;
-  
   padding: 20px; 
   min-height: 120px;
   color: #fff;
@@ -151,4 +165,5 @@ a {
   opacity: 0;
   pointer-events: none;
   z-index: 10
+  
 }
