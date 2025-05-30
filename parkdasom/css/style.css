@@ -33,6 +33,8 @@
   background-position: center; 
   background-size: 393px 1000px;  
   background-repeat: no-repeat;
+
+    user-select: none;     /* 텍스트 선택도 막기 (커서 깜빡임 방지) */
 }
 
 .logo {
@@ -107,8 +109,6 @@ a {
   position: relative; /* 말풍선의 위치 기준점 */
   display: inline-block;
   vertical-align: top; /* 가로 정렬 시 세로 위치 정렬 */
-
-  user-select: none;     /* 텍스트 선택도 막기 (커서 깜빡임 방지) */
 }
 
 .mbti-card:hover .mbti-desc {
@@ -125,6 +125,7 @@ a {
   transform: translateX(5%);
 
   width: 220px;
+  
   padding: 20px; 
   min-height: 120px;
   color: #fff;
@@ -150,5 +151,4 @@ a {
   opacity: 0;
   pointer-events: none;
   z-index: 10
-  
 }
