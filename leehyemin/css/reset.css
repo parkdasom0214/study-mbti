@@ -107,6 +107,7 @@ section {
 }
 body {
     line-height: 1;
+    box-sizing: border-box;
 }
 ol,
 ul {
@@ -128,30 +129,12 @@ table {
     border-spacing: 0;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 button {
+    background: inherit;
     border: none;
+    box-shadow: none;
+    border-radius: 0;
     padding: 0;
-    background: none;
+    overflow: visible;
     cursor: pointer;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
 }
